@@ -5,7 +5,10 @@ import socket
 import struct
 import random
 MAGICNUM = 0x497E
+"""
+imitates packages being lost as data is sent across a network.
 
+"""
 def looper(csi_sock, cso_sock, cri_sock, cro_sock, prob):
     while True:
         inputReady,_,_ = select.select([csi_sock, cri_sock],[],[])

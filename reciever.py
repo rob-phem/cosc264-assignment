@@ -10,6 +10,8 @@ DATA = 0
 ACK = 1
 struct = Struct("!iiii")
 struct1 = Struct("!iiiis")
+#creating the looper portion of the reciever which loops until all data
+#is received. 
 def looper(socIn, socOut, writeFile):
     expected = 0
     flag = True

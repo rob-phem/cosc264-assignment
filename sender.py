@@ -9,7 +9,10 @@ DATA = 0
 ACK = 1
 
 
-
+"""
+looper which contiues to send packets until all are sent.
+will resend those that arn't acknowleged as arrived.
+"""
 def looper(fname, sOut, sIn):
     count = 0
     sent = 0
@@ -59,7 +62,7 @@ def looper(fname, sOut, sIn):
                 continue
             
             else:
-                next_ = 1 - next_ #NEED TO CHANGE NEXT SOMEHOW
+                next_ = 1 - next_ 
                 if exitFlag == True:
                     readfile.close()
                     print(sent)
